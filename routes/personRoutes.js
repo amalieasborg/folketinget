@@ -20,8 +20,8 @@ router.get('/person/:id/update', async (req, res) => {
 });
 
 router.get('/', personController.getAllPersons);
-router.post('/film', personController.createPerson);
-router.post('/film/:id/update', personController.updatePerson);
-router.post('/film/:id/delete', personController.deletePerson);
+router.post('/person', personController.createPerson);
+router.post('/person/:id/update', personController.updatePerson);
+router.post('/person/:id/delete', personController.deletePerson);
 
 module.exports = router
