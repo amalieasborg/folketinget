@@ -22,7 +22,7 @@ exports.createPerson = async (req, res) => {
 exports.getAllPersons = async (req, res) => {
     try {
         const persons = await Person.find();
-        res.render('index', { films: persons });
+        res.render('index', { persons: persons });
     } catch (err) {
         console.error("Fejl ved hentning af person:", err);
         res.status(500).send("Fejl ved hentning af person.");
