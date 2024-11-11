@@ -2,10 +2,10 @@
 const mongoose = require('mongoose');
 
 const personSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    director: String,
-    year: Number,
-    genre: String
+    navn: { type: String, required: true },
+    parti: String,
+    position: String,
+    startdato: Number
 });
 
 module.exports = mongoose.model('Person', personSchema);
