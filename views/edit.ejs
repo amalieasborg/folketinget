@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Person</title>
+</head>
+<body>
+<h1>Edit Person</h1>
+<form action="/person/<%= person._id %>/update" method="POST">
+    <label>Navn: <input type="text" name="navn" value="<%= person.navn %>"></label><br>
+    <label>Parti: <input type="text" name="parti" value="<%= person.parti %>"></label><br>
+    <label>Position: <input type="text" name="position" value="<%= person.position %>"></label><br>
+    <label>Startdato: <input type="number" name="startdato" value="<%= person.startdato %>"></label><br>
+    <button type="submit">Update Person</button>
+</form>
+<a href="/">Back to list</a>
+</body>
+</html>

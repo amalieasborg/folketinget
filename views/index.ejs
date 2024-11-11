@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Manager</title>
+
+</head>
+<body>
+<h1>Folketing applikation </h1>
+<a href="/new">Add New person</a>
+<ul>
+    <% persons.forEach(person => { %>
+        <li><%= person.navn %> by <%= person.parti %> <%= person.position %> (<%= person.startdato %>)
+            <form action="/person/<%= person._id %>/delete" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+            <form action="/person/<%= person._id %>/update" method="GET" style="display:inline;">
+                <button type="submit">Update</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
+</body>
+</html>
